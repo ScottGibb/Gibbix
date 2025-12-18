@@ -13,8 +13,13 @@
     gnumake
     ripgrep
     procs
+
+    # For working with FTDI devices
+    libftdi
+  ] ++ lib.optionals pkgs.stdenv.isLinux [
+    libftdi1
   ];
-  
+
   home.sessionPath = [
     "${pkgs.uutils-coreutils-noprefix}/bin"
   ];
