@@ -10,5 +10,7 @@
     dust
     just
     gnumake
+    ripgrep
+    procs
   ];
 }
