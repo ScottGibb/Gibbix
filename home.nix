@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
-  home.username = "scottgibb";
-  home.homeDirectory = "/Users/scottgibb";
-
+  imports = [
+    ./modules/tools.nix
+    ./modules/git.nix
+    ./modules/terminal.nix
+  ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -67,7 +67,7 @@
   #  /etc/profiles/per-user/scottgibb/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nano";
   };
 
   # Let Home Manager install and manage itself.

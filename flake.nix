@@ -11,20 +11,36 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     let
-      system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
+      mkHomeConfiguration = system: modules: 
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          inherit modules;
+        };
     in {
-      homeConfigurations."scottgibb" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [
+      homeConfigurations = {
+        # Personal Mac (Apple Silicon)
+        "scottgibb@personal-mac" = mkHomeConfiguration "aarch64-darwin" [
           ./home.nix
+          ./hosts/personal-mac.nix
         ];
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+        # Work Mac (Apple Silicon)
+        "scottgibb@work-mac" = mkHomeConfiguration "aarch64-darwin" [
+          ./home.nix
+          ./hosts/work-mac.nix
+        ];
+
+        # NAS (likely x86_64 Linux)
+        "scottgibb@nas" = mkHomeConfiguration "x86_64-linux" [
+          ./home.nix
+          ./hosts/nas.nix
+        ];
+
+        # Raspberry Pi (ARM Linux)
+        "scottgibb@pi" = mkHomeConfiguration "aarch64-linux" [
+          ./home.nix
+          ./hosts/pi.nix
+        ];
       };
     };
 }
