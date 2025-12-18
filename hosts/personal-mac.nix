@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     # Personal development tools
     # Add personal-specific packages here
+    # blender
   ];
 
   # Personal-specific configurations

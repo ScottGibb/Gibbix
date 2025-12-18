@@ -13,7 +13,10 @@
     let
       mkHomeConfiguration = system: modules: 
         home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
           inherit modules;
         };
     in {

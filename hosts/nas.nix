@@ -7,4 +7,5 @@
   home.username = "pi";
   home.homeDirectory = "/home/pi";
   # NAS-specific configurations
+
 }
