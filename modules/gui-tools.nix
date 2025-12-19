@@ -29,4 +29,11 @@
       # whatsapp-for-mac  # SSL certificate issue with download
     ];
 
+  programs.vscode = {
+    enable = true;
+    profiles.default.userSettings = {
+      # Git sign-off commits
+      "git.alwaysSignOff" = true;
+    };
+  };
 }
