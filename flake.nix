@@ -34,13 +34,13 @@
         ];
 
         # NAS (likely x86_64 Linux)
-        "scottgibb@nas" = mkHomeConfiguration "x86_64-linux" [
+        "pi@nas" = mkHomeConfiguration "x86_64-linux" [
           ./home.nix
           ./hosts/nas.nix
         ];
 
         # Raspberry Pi (ARM Linux)
-        "scottgibb@pi" = mkHomeConfiguration "aarch64-linux" [
+        "pi@pi" = mkHomeConfiguration "aarch64-linux" [
           ./home.nix
           ./hosts/pi.nix
         ];
