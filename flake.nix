@@ -28,7 +28,7 @@
         ];
 
         # Work Mac (Apple Silicon)
-        "scottgibb@work-mac" = mkHomeConfiguration "aarch64-darwin" [
+        "scogib01@work-mac" = mkHomeConfiguration "aarch64-darwin" [
           ./home.nix
           ./hosts/work-mac.nix
         ];
