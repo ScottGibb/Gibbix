@@ -167,4 +167,4 @@ jobs:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v27
       - run: nix profile install nixpkgs#nixfmt-rfc-style
-      - run: nixfmt --check **/*.nix
+      - run: find . -name "*.nix" -exec nixfmt --check {} +
