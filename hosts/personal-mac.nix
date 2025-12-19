@@ -10,6 +10,7 @@
     # Personal development tools
     # Add personal-specific packages here
     # blender
+    tailscale
   ];
 
   # Personal-specific configurations
