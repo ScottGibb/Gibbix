@@ -14,6 +14,8 @@
     ripgrep
     procs
 
+    yazi
+
     # For working with FTDI devices
     libftdi
   ] ++ lib.optionals pkgs.stdenv.isLinux [

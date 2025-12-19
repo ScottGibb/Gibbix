@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     git
+    gitui
   ];
 
   # Git configuration (shared across all systems)
