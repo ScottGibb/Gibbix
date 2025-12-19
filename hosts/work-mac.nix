@@ -5,7 +5,8 @@
     # Work-specific tools
     # Add work-specific packages here
   ];
-
+  home.username = "scogib01";
+  home.homeDirectory = "/Users/scogib01";
   # Work-specific configurations
   programs.git = {
     enable = true;
