@@ -8,3 +8,4 @@
   home.homeDirectory = "/home/pi";
   # Pi-specific configurations
 }
+
