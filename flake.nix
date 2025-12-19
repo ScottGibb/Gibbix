@@ -33,6 +33,12 @@
           ./hosts/work-mac.nix
         ];
 
+        # Work Linux (aarch64)
+        "scott@work-linux" = mkHomeConfiguration "aarch64-linux" [
+          ./home.nix
+          ./hosts/work-linux.nix
+        ];
+        
         # NAS (likely x86_64 Linux)
         "pi@nas" = mkHomeConfiguration "x86_64-linux" [
           ./home.nix
