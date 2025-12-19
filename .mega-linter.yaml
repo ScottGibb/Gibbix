@@ -35,6 +35,5 @@ GITHUB_STATUS_REPORTER: true
 VALIDATE_ALL_CODEBASE: true
 OUTPUT_DETAIL: detailed
 
-
 #  Linter Configuration
 MARKDOWN_MARKDOWNLINT_CONFIG_FILE: .markdownlint.json
