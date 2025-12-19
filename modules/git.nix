@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     git
-    gitui
+    # gitui  # Build failing on aarch64-darwin
   ];
 
   # Git configuration (shared across all systems)
