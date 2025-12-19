@@ -7,6 +7,9 @@
       # Initialize starship
       starship init fish | source
     '';
+    shellInit = ''
+      set -gx EDITOR nano
+    '';
   };
 
   programs.starship = {
