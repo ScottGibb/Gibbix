@@ -5,7 +5,7 @@
   home.packages = with pkgs; [
   ];
 
-# Git configuration (shared across all systems)
+  # Git configuration (shared across all systems)
   programs.git = {
     enable = true;
     settings = {
@@ -19,4 +19,3 @@
     };
   };
 }
-

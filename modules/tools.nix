@@ -1,29 +1,31 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    uutils-coreutils-noprefix  # Rust replacement for GNU coreutils (no prefix)
-    bat
-    bottom
-    gping
-    zellij
-    fd
-    dust
-    just
-    gnumake
-    ripgrep
-    procs
+  home.packages =
+    with pkgs;
+    [
+      uutils-coreutils-noprefix # Rust replacement for GNU coreutils (no prefix)
+      bat
+      bottom
+      gping
+      zellij
+      fd
+      dust
+      just
+      gnumake
+      ripgrep
+      procs
 
-    yazi
+      yazi
 
-    # For working with FTDI devices
-    libftdi
-  ] ++ lib.optionals pkgs.stdenv.isLinux [
-    libftdi1
-  ];
+      # For working with FTDI devices
+      libftdi
+    ]
+    ++ lib.optionals pkgs.stdenv.isLinux [
+      libftdi1
+    ];
 
   home.sessionPath = [
     "${pkgs.uutils-coreutils-noprefix}/bin"
   ];
 }
-

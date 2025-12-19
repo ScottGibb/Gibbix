@@ -8,4 +8,3 @@
   home.username = "scogib01";
   home.homeDirectory = "/Users/scogib01";
 }
-

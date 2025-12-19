@@ -4,17 +4,16 @@
   home.packages = with pkgs; [
   ];
 
-   programs.git = {
+  programs.git = {
     enable = true;
     settings = {
-    core = {
-      editor = "nano";
-    };
-    user = {
-      name = lib.mkForce "Scott Gibb";
-      email = lib.mkForce "scott.gibb@arm.com";
+      core = {
+        editor = "nano";
+      };
+      user = {
+        name = lib.mkForce "Scott Gibb";
+        email = lib.mkForce "scott.gibb@arm.com";
+      };
     };
   };
-};
 }
-
