@@ -17,11 +17,10 @@
     # Blogs
     hugo
 
-
     # Web development
     nodejs
     bun
-    
+
     # Writing Tools
     typst
   ];

@@ -9,4 +9,3 @@
   home.homeDirectory = "/home/scott";
   # Work-specific configurations
 }
-

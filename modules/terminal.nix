@@ -16,6 +16,5 @@
     enable = true;
     enableFishIntegration = true;
   };
-  
-}
 
+}

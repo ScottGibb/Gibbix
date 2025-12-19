@@ -9,9 +9,11 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs =
+    { nixpkgs, home-manager, ... }:
     let
-      mkHomeConfiguration = system: modules: 
+      mkHomeConfiguration =
+        system: modules:
         home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             inherit system;
@@ -19,7 +21,8 @@
           };
           inherit modules;
         };
-    in {
+    in
+    {
       homeConfigurations = {
 
         # Work Mac (Apple Silicon)
@@ -42,7 +45,7 @@
           ./modules/personal.nix
           ./hosts/personal-mac.nix
         ];
-        
+
         # NAS (likely x86_64 Linux)
         "pi@nas" = mkHomeConfiguration "x86_64-linux" [
           ./home.nix
@@ -59,4 +62,3 @@
       };
     };
 }
-
