@@ -19,7 +19,7 @@
     # preform # Doesn't exist
 
   ] ++ lib.optionals pkgs.stdenv.isLinux [
-    angryipscanner
+    # angryipscanner
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     # whatsapp-for-mac  # SSL certificate issue with download
   ];
