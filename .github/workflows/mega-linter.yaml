@@ -158,3 +158,12 @@ jobs:
             echo "A PR with formatting fixes has been created. Please merge it before proceeding."
             exit 1
           fi
+
+  # Nix Format checks
+  nix-format:
+    name: Nix Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: apt-get update && apt-get install -y nix
+      - run: nixfmt --check .
