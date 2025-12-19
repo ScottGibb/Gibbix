@@ -22,8 +22,6 @@
 
     ]
 
-
-    
     ++ lib.optionals pkgs.stdenv.isLinux [
       # angryipscanner
     ]
