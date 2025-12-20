@@ -6,27 +6,40 @@
     [
       # IDES and Editors
       vscode
+      # arduino-ide # Not supported on mac
       obsidian
 
-      # Diagrams
+      # Diagrams/ Drawing
+      gimp2
       drawio
 
-      # Messaging apps
-      telegram-desktop
+      # Video / Music
+      vlc-bin
+      # obs-studio # Not available on MacOS
+      # spotify # Hash mismatch - upstream binary changed
 
-      ## CAD/ECAD Apps
-      # kicad
+      # CAD/ECAD Apps
+      # kicad # Marked as Broken
       # prusaslicer # Doesn't exist
       # cura # Linux Only
       # preform # Doesn't exist
 
+      # Logic Analyser
+      # saleae-logic-2
+
+      # Browser
+      google-chrome
+
+
+      # Misc
+      # lmstudio # Marked as broken in nixpkgs
     ]
 
     ++ lib.optionals pkgs.stdenv.isLinux [
       # angryipscanner
+      # saleae-logic-2
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
-      # whatsapp-for-mac  # SSL certificate issue with download
     ];
 
   programs.vscode = {
