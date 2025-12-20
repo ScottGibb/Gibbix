@@ -16,6 +16,7 @@
       vlc-bin
       # obs-studio # Not available on MacOS
       # spotify # Hash mismatch - upstream binary changed
+      # jellyfin-media-player - Not Secure
 
       # CAD/ECAD Apps
       # kicad # Marked as Broken
