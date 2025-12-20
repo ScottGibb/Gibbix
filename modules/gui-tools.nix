@@ -5,7 +5,6 @@
     with pkgs;
     [
       # IDES and Editors
-      vscode
       # arduino-ide # Not supported on mac
       obsidian
 

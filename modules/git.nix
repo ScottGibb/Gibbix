@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    git
+    # git  # Managed by programs.git
     # gitui  # Build failing on aarch64-darwin
   ];
 
