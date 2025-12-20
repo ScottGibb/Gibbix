@@ -25,7 +25,8 @@
 
       # Logic Analyser
       # saleae-logic-2
-
+      pulseview
+      
       # Browser
       google-chrome
 
