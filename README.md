@@ -8,3 +8,10 @@ nix-shell '<home-manager>' -A install
 # Apply Home Manager configuration
 home-manager switch
 ```
+
+## Personal Mac
+
+```bash
+
+home-manager switch --flake ~/.config/home-manager#scottgibb@personal-mac
+```
