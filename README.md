@@ -14,9 +14,11 @@ A comprehensive, cross-platform Nix Home Manager configuration for managing deve
 - [Quick Start](#quick-start)
 - [Repository Structure](#repository-structure)
 - [Usage](#usage)
+- [Development](#development)
 - [Adding a New Host](#adding-a-new-host)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
+- [Additional Documentation](#additional-documentation)
 
 ## 🎯 Overview
 
@@ -158,6 +160,25 @@ home-manager switch
 
 ## 🔧 Usage
 
+### Development Environment
+
+This repository includes a development shell with useful tools for editing Nix configurations:
+
+```bash
+# Enter the development shell
+nix develop
+
+# Or use direnv for automatic loading
+direnv allow
+```
+
+The dev shell includes:
+
+- `nixfmt-rfc-style` - Nix formatter
+- `nil` / `nixd` - Nix language servers for IDE integration
+- `statix` - Nix linter
+- `deadnix` - Find unused Nix code
+
 ### Updating Packages
 
 Update flake inputs (nixpkgs, home-manager):
@@ -199,6 +220,58 @@ List all packages installed by Home Manager:
 ```bash
 home-manager packages
 ```
+
+## 💻 Development
+
+### Setting Up Development Environment
+
+For working on this configuration:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/ScottGibb/Gibbix.git
+   cd Gibbix
+   ```
+
+2. **Enter development shell**:
+
+   ```bash
+   nix develop
+   ```
+
+   Or use [direnv](https://direnv.net/) for automatic environment loading:
+
+   ```bash
+   # Install direnv via Home Manager or your system
+   direnv allow
+   ```
+
+### Development Workflow
+
+1. **Make changes** to Nix files
+2. **Format code**: `nix fmt`
+3. **Check for issues**: `nix flake check`
+4. **Test locally**: `home-manager switch --flake .#<your-config>`
+5. **Commit changes** using [conventional commits](#conventional-commits)
+
+### Using Overlays
+
+To add custom packages or override existing ones:
+
+1. Edit `overlays/default.nix`
+2. Add your overlay to the configuration in `flake.nix`
+
+Example:
+
+```nix
+# overlays/default.nix
+final: prev: {
+  my-custom-tool = prev.callPackage ./pkgs/my-custom-tool { };
+}
+```
+
+For more information, see [Nixpkgs Overlays documentation](https://nixos.org/manual/nixpkgs/stable/#chap-overlays).
 
 ## ➕ Adding a New Host
 
@@ -306,6 +379,10 @@ This project uses conventional commits:
 - All Nix files are formatted with `nixfmt-rfc-style`
 - Run `nix flake check` before submitting PRs
 - CI runs on all pull requests
+
+## 📚 Additional Documentation
+
+- [Nix Version Pinning Strategy](docs/nix-version-pinning.md) - How we manage dependencies
 
 ## 📝 License
 
