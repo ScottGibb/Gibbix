@@ -8,6 +8,9 @@ on:
 
 jobs:
   nix-build-test:
+    permissions:
+      contents: read
+
     strategy:
       matrix:
         include:
@@ -64,6 +67,9 @@ jobs:
             --show-trace
 
   flake-check:
+    permissions:
+      contents: read
+
     runs-on: ubuntu-latest
     name: Flake Check
 
@@ -83,6 +89,9 @@ jobs:
         run: nix flake check --all-systems --print-build-logs
 
   check-flake-inputs:
+    permissions:
+      contents: read
+
     runs-on: ubuntu-latest
     name: Check Flake Inputs
 
