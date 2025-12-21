@@ -1,0 +1,106 @@
+name: "Nix Build Test"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  nix-build-test:
+    strategy:
+      matrix:
+        include:
+          # macOS configurations
+          - config: "scogib01@work-mac"
+            os: macos-latest
+            system: aarch64-darwin
+          - config: "scottgibb@personal-mac"
+            os: macos-latest
+            system: aarch64-darwin
+          # Linux configurations
+          - config: "scott@work-linux"
+            os: ubuntu-latest
+            system: aarch64-linux
+          - config: "pi@nas"
+            os: ubuntu-latest
+            system: x86_64-linux
+          - config: "pi@pi"
+            os: ubuntu-latest
+            system: aarch64-linux
+      fail-fast: false
+
+    runs-on: ${{ matrix.os }}
+    name: Build ${{ matrix.config }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+            accept-flake-config = true
+
+      - name: Setup Cachix
+        uses: cachix/cachix-action@v15
+        with:
+          name: gibbix
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          skipPush: ${{ secrets.CACHIX_AUTH_TOKEN == '' }}
+
+      - name: Build Home Manager configuration
+        run: |
+          nix build ".#homeConfigurations.\"${{ matrix.config }}\".activationPackage" \
+            --print-build-logs \
+            --show-trace
+
+      - name: Check configuration evaluation
+        run: |
+          nix eval ".#homeConfigurations.\"${{ matrix.config }}\".config.home.stateVersion" \
+            --show-trace
+
+  flake-check:
+    runs-on: ubuntu-latest
+    name: Flake Check
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+            accept-flake-config = true
+
+      - name: Run flake check
+        run: nix flake check --all-systems --print-build-logs
+
+  check-flake-inputs:
+    runs-on: ubuntu-latest
+    name: Check Flake Inputs
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+
+      - name: Check for outdated inputs
+        run: |
+          nix flake update --commit-lock-file --dry-run || echo "Some inputs may be outdated"
+          nix flake metadata
+
+      - name: Show flake info
+        run: nix flake show
