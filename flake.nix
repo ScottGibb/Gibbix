@@ -43,6 +43,40 @@
         pkgs.nixfmt-rfc-style
       );
 
+      # Development shells for working on this configuration
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          default = pkgs.mkShell {
+            name = "gibbix-dev";
+            buildInputs = with pkgs; [
+              nixfmt-rfc-style
+              nil # Nix language server
+              nixd # Another Nix language server option
+              statix # Nix linter
+              deadnix # Find dead Nix code
+            ];
+            shellHook = ''
+              echo "🚀 Gibbix development environment loaded!"
+              echo ""
+              echo "Available tools:"
+              echo "  - nixfmt-rfc-style: Format Nix files"
+              echo "  - nil/nixd: Nix language servers"
+              echo "  - statix: Nix linter"
+              echo "  - deadnix: Find unused Nix code"
+              echo ""
+              echo "Quick commands:"
+              echo "  - nix fmt: Format all Nix files"
+              echo "  - nix flake check: Validate configuration"
+              echo "  - home-manager switch: Apply changes"
+            '';
+          };
+        }
+      );
+
       homeConfigurations = {
 
         # Work Mac (Apple Silicon)
