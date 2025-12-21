@@ -1,15 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [
-  ];
+  home.packages = with pkgs; [ ];
 
   programs.git = {
-    settings = {
+    extraConfig = {
       user = {
         name = lib.mkForce "Scott Gibb";
         email = lib.mkForce "scott.gibb@arm.com";
       };
-    }
     };
   };
+}

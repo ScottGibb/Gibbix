@@ -8,18 +8,14 @@
 
   home.packages = with pkgs; [
     # Personal development tools
-    # Add personal-specific packages here
-    # blender
     tailscale
   ];
 
-  # Personal-specific configurations
-
-  # Create Directories using .keep files
+  # Create project directories
   home.file."Projects/.keep".text = "";
   home.file."Obsidian/.keep".text = "";
 
-  # Clone git repository on first run only
+  # Clone Obsidian knowledge base repository on first activation
   home.activation.cloneObsidianRepo = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     if [ ! -d "$HOME/Obsidian/Gibb-Knowledge-Base/.git" ]; then
       $DRY_RUN_CMD ${pkgs.git}/bin/git clone -b main git@github.com:ScottGibb/Gibb-Knowledge-Base.git "$HOME/Obsidian/Gibb-Knowledge-Base"

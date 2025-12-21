@@ -12,6 +12,7 @@
   outputs =
     { nixpkgs, home-manager, ... }:
     let
+      # Helper function to create home configurations
       mkHomeConfiguration =
         system: modules:
         home-manager.lib.homeManagerConfiguration {
@@ -21,8 +22,27 @@
           };
           inherit modules;
         };
+
+      # List of all supported systems
+      allSystems = [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
+
+      # Helper to run a function for each system
+      forAllSystems = nixpkgs.lib.genAttrs allSystems;
     in
     {
+      # Formatter for `nix fmt`
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        pkgs.nixfmt-rfc-style
+      );
+
       homeConfigurations = {
 
         # Work Mac (Apple Silicon)

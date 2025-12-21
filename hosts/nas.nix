@@ -1,11 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    # NAS-specific tools
-  ];
   home.username = "pi";
   home.homeDirectory = "/home/pi";
-  # NAS-specific configurations
 
+  home.packages = with pkgs; [
+    # NAS-specific tools can be added here
+  ];
 }
