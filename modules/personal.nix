@@ -1,8 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-
-  home.packages = with pkgs; [
+  home.packages =
+    with pkgs;
+    [
       # Messaging apps
       telegram-desktop
       # signal-desktop # Not available on Mac
@@ -11,13 +12,14 @@
       chatgpt
 
       # steam  # Not available on Mac
-  ]++ lib.optionals pkgs.stdenv.isDarwin [
+    ]
+    ++ lib.optionals pkgs.stdenv.isDarwin [
       # whatsapp-for-mac  # SSL certificate issue with download
-  ];
+    ];
 
   # Git configuration (shared across all systems)
   programs.git = {
-    settings = {
+    extraConfig = {
       user = {
         name = "Scott Gibb";
         email = "smgibb@yahoo.com";
