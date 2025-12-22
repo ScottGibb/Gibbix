@@ -19,7 +19,7 @@
 
   # Git configuration (shared across all systems)
   programs.git = {
-    extraConfig = {
+    settings = {
       user = {
         name = "Scott Gibb";
         email = "smgibb@yahoo.com";
