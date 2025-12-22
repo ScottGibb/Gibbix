@@ -103,14 +103,14 @@
         # NAS (likely x86_64 Linux)
         "pi@nas" = mkHomeConfiguration "x86_64-linux" [
           ./home.nix
-          ./modules/personal.nix
+          # ./modules/personal.nix
           ./hosts/nas.nix
         ];
 
         # Raspberry Pi (ARM Linux)
         "pi@pi" = mkHomeConfiguration "aarch64-linux" [
           ./home.nix
-          ./modules/personal.nix
+          # ./modules/personal.nix
           ./hosts/pi.nix
         ];
       };
