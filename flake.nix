@@ -82,6 +82,7 @@
         # Work Mac (Apple Silicon)
         "scogib01@work-mac" = mkHomeConfiguration "aarch64-darwin" [
           ./home.nix
+          ./modules/gui-tools.nix
           ./modules/work.nix
           ./hosts/work-mac.nix
         ];
@@ -96,6 +97,7 @@
         # Personal Mac (Apple Silicon)
         "scottgibb@personal-mac" = mkHomeConfiguration "aarch64-darwin" [
           ./home.nix
+          ./modules/gui-tools.nix
           ./modules/personal.nix
           ./hosts/personal-mac.nix
         ];

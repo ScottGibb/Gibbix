@@ -3,7 +3,6 @@
 {
   imports = [
     ./modules/tools.nix
-    ./modules/gui-tools.nix
     ./modules/git.nix
     ./modules/terminal.nix
     ./modules/languages.nix
