@@ -9,12 +9,12 @@
       # signal-desktop # Not available on Mac
       discord
 
-      chatgpt
 
       # steam  # Not available on Mac
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # whatsapp-for-mac  # SSL certificate issue with download
+      chatgpt # Not available on Linux
     ];
 
   # Git configuration (shared across all systems)
