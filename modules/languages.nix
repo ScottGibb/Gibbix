@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     # Rust tools
     rustup
+    espup
     cargo-generate
     esp-generate
 
