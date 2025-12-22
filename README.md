@@ -6,20 +6,6 @@
 
 A comprehensive, cross-platform Nix Home Manager configuration for managing development environments across macOS and Linux systems.
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Supported Systems](#supported-systems)
-- [Prerequisites](#prerequisites)
-- [Quick Start](#quick-start)
-- [Repository Structure](#repository-structure)
-- [Usage](#usage)
-- [Development](#development)
-- [Adding a New Host](#adding-a-new-host)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [Additional Documentation](#additional-documentation)
-
 ## 🎯 Overview
 
 Gibbix is a flake-based Home Manager configuration that provides:
@@ -87,31 +73,31 @@ Select the appropriate configuration for your system:
 #### Work Mac (Apple Silicon)
 
 ```bash
-nix run home-manager/release-25.11 -- switch --flake ~/.config/home-manager#scogib01@work-mac
+nix  switch --flake ~/.config/home-manager#scogib01@work-mac
 ```
 
 #### Work Linux (ARM64)
 
 ```bash
-nix run home-manager/release-25.11 -- switch --flake ~/.config/home-manager#scott@work-linux
+nix  switch --flake ~/.config/home-manager#scott@work-linux
 ```
 
 #### Personal Mac (Apple Silicon)
 
 ```bash
-nix run home-manager/release-25.11 -- switch --flake ~/.config/home-manager#scottgibb@personal-mac
+nix  switch --flake ~/.config/home-manager#scottgibb@personal-mac
 ```
 
 #### NAS (x86_64 Linux)
 
 ```bash
-nix run home-manager/release-25.11 -- switch --flake ~/.config/home-manager#pi@nas
+nix  switch --flake ~/.config/home-manager#pi@nas
 ```
 
 #### Raspberry Pi (ARM64 Linux)
 
 ```bash
-nix run home-manager/release-25.11 -- switch --flake ~/.config/home-manager#pi@pi
+nix  switch --flake ~/.config/home-manager#pi@pi
 ```
 
 ### 3. Apply Changes (After First Installation)
@@ -122,35 +108,6 @@ Once Home Manager is installed, you can apply future changes with:
 home-manager switch --flake ~/.config/home-manager#<your-config>
 ```
 
-Or use the shorthand if you're in the directory:
-
-```bash
-home-manager switch
-```
-
-## 📁 Repository Structure
-
-```
-.
-├── flake.nix              # Main flake configuration with all outputs
-├── flake.lock             # Locked dependency versions
-├── home.nix               # Base Home Manager configuration
-├── hosts/                 # Host-specific configurations
-│   ├── work-mac.nix       # Work MacBook (Apple Silicon)
-│   ├── work-linux.nix     # Work Linux machine (ARM64)
-│   ├── personal-mac.nix   # Personal MacBook (Apple Silicon)
-│   ├── nas.nix            # NAS server (x86_64)
-│   └── pi.nix             # Raspberry Pi (ARM64)
-└── modules/               # Modular configuration components
-    ├── git.nix            # Git configuration
-    ├── terminal.nix       # Fish shell and Starship prompt
-    ├── tools.nix          # CLI tools (bat, ripgrep, etc.)
-    ├── gui-tools.nix      # GUI applications (VSCode, browsers, etc.)
-    ├── languages.nix      # Programming language toolchains
-    ├── personal.nix       # Personal profile settings
-    └── work.nix           # Work profile settings
-```
-
 ### Module Breakdown
 
 - **`flake.nix`** - Defines all Home Manager configurations and outputs
@@ -159,25 +116,6 @@ home-manager switch
 - **`modules/`** - Reusable configuration modules for specific purposes
 
 ## 🔧 Usage
-
-### Development Environment
-
-This repository includes a development shell with useful tools for editing Nix configurations:
-
-```bash
-# Enter the development shell
-nix develop
-
-# Or use direnv for automatic loading
-direnv allow
-```
-
-The dev shell includes:
-
-- `nixfmt-rfc-style` - Nix formatter
-- `nil` / `nixd` - Nix language servers for IDE integration
-- `statix` - Nix linter
-- `deadnix` - Find unused Nix code
 
 ### Updating Packages
 
@@ -193,7 +131,7 @@ home-manager switch
 Validate your configuration without applying:
 
 ```bash
-nix flake check
+nix flake check --all-systems
 ```
 
 ### Formatting Nix Files
@@ -201,16 +139,7 @@ nix flake check
 Format all `.nix` files using the configured formatter:
 
 ```bash
-nix fmt
-```
-
-### Cleaning Up
-
-Remove old generations to free up disk space:
-
-```bash
-home-manager expire-generations "-30 days"
-nix-collect-garbage -d
+nix fmt **/*.nix
 ```
 
 ### Viewing Installed Packages
@@ -220,58 +149,6 @@ List all packages installed by Home Manager:
 ```bash
 home-manager packages
 ```
-
-## 💻 Development
-
-### Setting Up Development Environment
-
-For working on this configuration:
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/ScottGibb/Gibbix.git
-   cd Gibbix
-   ```
-
-2. **Enter development shell**:
-
-   ```bash
-   nix develop
-   ```
-
-   Or use [direnv](https://direnv.net/) for automatic environment loading:
-
-   ```bash
-   # Install direnv via Home Manager or your system
-   direnv allow
-   ```
-
-### Development Workflow
-
-1. **Make changes** to Nix files
-2. **Format code**: `nix fmt`
-3. **Check for issues**: `nix flake check`
-4. **Test locally**: `home-manager switch --flake .#<your-config>`
-5. **Commit changes** using [conventional commits](#conventional-commits)
-
-### Using Overlays
-
-To add custom packages or override existing ones:
-
-1. Edit `overlays/default.nix`
-2. Add your overlay to the configuration in `flake.nix`
-
-Example:
-
-```nix
-# overlays/default.nix
-final: prev: {
-  my-custom-tool = prev.callPackage ./pkgs/my-custom-tool { };
-}
-```
-
-For more information, see [Nixpkgs Overlays documentation](https://nixos.org/manual/nixpkgs/stable/#chap-overlays).
 
 ## ➕ Adding a New Host
 
@@ -351,45 +228,3 @@ If Home Manager complains about existing files:
 1. Backup your existing dotfiles
 2. Remove conflicting files
 3. Run `home-manager switch` again
-
-## 🤝 Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes using [conventional commits](https://www.conventionalcommits.org/)
-4. Push to your branch
-5. Open a Pull Request
-
-### Conventional Commits
-
-This project uses conventional commits:
-
-- `feat:` - New features
-- `fix:` - Bug fixes
-- `docs:` - Documentation changes
-- `style:` - Code style changes (formatting, etc.)
-- `refactor:` - Code refactoring
-- `test:` - Test additions or modifications
-- `ci:` - CI/CD changes
-
-### Code Quality
-
-- All Nix files are formatted with `nixfmt-rfc-style`
-- Run `nix flake check` before submitting PRs
-- CI runs on all pull requests
-
-## 📚 Additional Documentation
-
-- [Nix Version Pinning Strategy](docs/nix-version-pinning.md) - How we manage dependencies
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- [Nix](https://nixos.org/) - The purely functional package manager
-- [Home Manager](https://github.com/nix-community/home-manager) - Declarative dotfile management
-- [nixpkgs](https://github.com/NixOS/nixpkgs) - The Nix package repository
