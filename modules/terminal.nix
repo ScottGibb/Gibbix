@@ -10,9 +10,6 @@
     shellInit = ''
       set -gx EDITOR nano
     '';
-    # Enable shell completions
-    shellAbbrs = {
-      # Git abbreviations
   };
 
   programs.starship = {
