@@ -12,7 +12,7 @@
       drawio
 
       # Video / Music
-      vlc-bin
+      # vlc-bin-universal # Universal build is brooken
 
       # Logic Analyser
       pulseview
