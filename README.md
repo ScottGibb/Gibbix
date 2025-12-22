@@ -1,7 +1,7 @@
 # Gibbix - Personal Nix Home Manager Configuration
 
 [![Nix Build Test](https://github.com/ScottGibb/Gibbix/actions/workflows/nix-build-test.yaml/badge.svg)](https://github.com/ScottGibb/Gibbix/actions/workflows/nix-build-test.yaml)
-[![Flake Check](https://github.com/ScottGibb/Gibbix/actions/workflows/test.yaml/badge.svg)](https://github.com/ScottGibb/Gibbix/actions/workflows/test.yaml)
+[![Flake Check](https://github.com/ScottGibb/Gibbix/actions/workflows/flake-check.yaml/badge.svg)](https://github.com/ScottGibb/Gibbix/actions/workflows/flake-check.yaml)
 [![MegaLinter](https://github.com/ScottGibb/Gibbix/actions/workflows/mega-linter.yaml/badge.svg)](https://github.com/ScottGibb/Gibbix/actions/workflows/mega-linter.yaml)
 
 A comprehensive, cross-platform Nix Home Manager configuration for managing development environments across macOS and Linux systems.
@@ -293,7 +293,7 @@ To add a new host configuration:
 }
 ```
 
-2. **Add the configuration to `flake.nix`**:
+1. **Add the configuration to `flake.nix`**:
 
 ```nix
 "yourusername@new-host" = mkHomeConfiguration "x86_64-linux" [
@@ -303,7 +303,7 @@ To add a new host configuration:
 ];
 ```
 
-3. **Apply the configuration**:
+1. **Apply the configuration**:
 
 ```bash
 home-manager switch --flake ~/.config/home-manager#yourusername@new-host
@@ -393,4 +393,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Nix](https://nixos.org/) - The purely functional package manager
 - [Home Manager](https://github.com/nix-community/home-manager) - Declarative dotfile management
 - [nixpkgs](https://github.com/NixOS/nixpkgs) - The Nix package repository
-
