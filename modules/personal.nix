@@ -9,7 +9,6 @@
       # signal-desktop # Not available on Mac
       discord
 
-
       # steam  # Not available on Mac
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
