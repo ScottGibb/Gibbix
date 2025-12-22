@@ -8,7 +8,6 @@
 
   home.packages = with pkgs; [
     # Personal development tools
-    tailscale
   ];
 
   # Create project directories
