@@ -21,15 +21,15 @@ jobs:
           - config: "scottgibb@personal-mac"
             os: macos-latest
             system: aarch64-darwin
-          # Linux configurations
-          - config: "scott@work-linux"
-            os: ubuntu-latest
+        # Linux configurations
+          - config:  "scott@work-linux"
+            os: ubuntu-24.04-arm  # Use ARM runner
             system: aarch64-linux
           - config: "pi@nas"
             os: ubuntu-latest
             system: x86_64-linux
           - config: "pi@pi"
-            os: ubuntu-latest
+            os:  ubuntu-24.04-arm  # Use ARM runner
             system: aarch64-linux
       fail-fast: false
 
