@@ -2,7 +2,6 @@
 
 ## 1.0.0 (2025-12-22)
 
-
 ### Features
 
 * add acount ([55c588b](https://github.com/ScottGibb/Gibbix/commit/55c588b3ceb2a31d9a806165c0f840da15d4af95))
@@ -26,7 +25,6 @@
 * more tools and some refactoring ([a0000ff](https://github.com/ScottGibb/Gibbix/commit/a0000ff5054c4ca0845bc7ac37657b336d65c3bc))
 * override core utils with rust equivelant... ([d9dbd07](https://github.com/ScottGibb/Gibbix/commit/d9dbd07c7b0f0ed503a4636e8bc7fa87dad14f74))
 * some more tools ([e7581d3](https://github.com/ScottGibb/Gibbix/commit/e7581d303b40a9519963779c889592872aab3f38))
-
 
 ### Bug Fixes
 
