@@ -73,31 +73,31 @@ Select the appropriate configuration for your system:
 #### Work Mac (Apple Silicon)
 
 ```bash
-nix  switch --flake ~/.config/home-manager#scogib01@work-mac
+home-manager  switch --flake ~/.config/home-manager#scogib01@work-mac
 ```
 
 #### Work Linux (ARM64)
 
 ```bash
-nix  switch --flake ~/.config/home-manager#scott@work-linux
+home-manager  switch --flake ~/.config/home-manager#scott@work-linux
 ```
 
 #### Personal Mac (Apple Silicon)
 
 ```bash
-nix  switch --flake ~/.config/home-manager#scottgibb@personal-mac
+home-manager  switch --flake ~/.config/home-manager#scottgibb@personal-mac
 ```
 
 #### NAS (x86_64 Linux)
 
 ```bash
-nix  switch --flake ~/.config/home-manager#pi@nas
+home-manager  switch --flake ~/.config/home-manager#pi@nas
 ```
 
 #### Raspberry Pi (ARM64 Linux)
 
 ```bash
-nix  switch --flake ~/.config/home-manager#pi@pi
+home-manager  switch --flake ~/.config/home-manager#pi@pi
 ```
 
 ### 3. Apply Changes (After First Installation)
