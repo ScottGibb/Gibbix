@@ -10,6 +10,7 @@
       discord
 
       # steam  # Not available on Mac
+      # jellyfin-media-player # Broken on macOS - qtwebengine won't compile
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # whatsapp-for-mac  # SSL certificate issue with download
