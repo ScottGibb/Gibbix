@@ -6,6 +6,7 @@
     rustup
     espup
     cargo-generate
+    cargo-msrv
     esp-generate
 
     # Python tools
