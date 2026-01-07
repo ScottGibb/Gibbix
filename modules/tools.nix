@@ -17,6 +17,7 @@
       procs
 
       yazi
+      nano
 
       # For working with FTDI devices
       libftdi
@@ -28,4 +29,11 @@
   home.sessionPath = [
     "${pkgs.uutils-coreutils-noprefix}/bin"
   ];
+
+  programs.zellij = {
+    enable = true;
+    settings = {
+      default_shell = "fish";
+    };
+  };
 }
