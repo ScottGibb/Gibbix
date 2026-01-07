@@ -18,6 +18,7 @@
 
       yazi
       nano
+      delta
 
       # For working with FTDI devices
       libftdi
