@@ -19,6 +19,9 @@
 
       # Browser
       google-chrome
+
+      # Open Source 
+      element-desktop
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [ ]
     ++ lib.optionals pkgs.stdenv.isDarwin [ ];
