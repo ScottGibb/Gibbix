@@ -16,14 +16,15 @@
 
       # Logic Analyser
       pulseview
-
       # Browser
       google-chrome
 
       # Open Source 
       element-desktop
     ]
-    ++ lib.optionals pkgs.stdenv.isLinux [ ]
+    ++ lib.optionals pkgs.stdenv.isLinux [ 
+            saleae-logic-2
+    ]
     ++ lib.optionals pkgs.stdenv.isDarwin [ ];
 
   programs.vscode = {
