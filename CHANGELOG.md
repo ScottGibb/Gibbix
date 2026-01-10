@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/ScottGibb/Gibbix/compare/v1.0.0...v1.1.0) (2026-01-10)
+
+
+### Features
+
+* add better diff tools ([2400374](https://github.com/ScottGibb/Gibbix/commit/24003740f9460ebcd4dd2264b98c847a91786d24))
+* add cargo msrv ([45fd52a](https://github.com/ScottGibb/Gibbix/commit/45fd52add8de726c4eabb94fd1b27113cb2b8c72))
+* add element ([14df909](https://github.com/ScottGibb/Gibbix/commit/14df909a8ca5597e3f8a50b48199ae903ed9114b))
+* add salae logic ([43885ca](https://github.com/ScottGibb/Gibbix/commit/43885cae3201dcd882e577b13515df9763bee28c))
+* Add zellij config ([db5d989](https://github.com/ScottGibb/Gibbix/commit/db5d9899593732d4528e72633cc9ac80cb4917bd))
+* Enable delta program with Git integration ([84be0e8](https://github.com/ScottGibb/Gibbix/commit/84be0e875d624c8bd7bb02838340e3cdce27fb28))
+
 ## 1.0.0 (2025-12-22)
 
 ### Features
