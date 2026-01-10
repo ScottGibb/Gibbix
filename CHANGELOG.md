@@ -2,7 +2,6 @@
 
 ## [1.1.0](https://github.com/ScottGibb/Gibbix/compare/v1.0.0...v1.1.0) (2026-01-10)
 
-
 ### Features
 
 * add better diff tools ([2400374](https://github.com/ScottGibb/Gibbix/commit/24003740f9460ebcd4dd2264b98c847a91786d24))
