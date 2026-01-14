@@ -20,12 +20,10 @@
     };
   };
 
-  programs.lazygit = {
-    enable=true;
-  };
 
-  programs.git-absorb = {
-    enable=true;
-  };
+  home.packages = with pkgs; [
+    git-absorb
+    lazygit
+  ];
 
 }
