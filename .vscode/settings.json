@@ -10,5 +10,10 @@
   "[json]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[nix]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "brettm12345.nixfmt-vscode"
+
   }
 }
