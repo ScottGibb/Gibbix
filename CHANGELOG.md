@@ -2,12 +2,10 @@
 
 ## [1.2.0](https://github.com/ScottGibb/Gibbix/compare/v1.1.0...v1.2.0) (2026-01-14)
 
-
 ### Features
 
 * add more git tools ([9398ad8](https://github.com/ScottGibb/Gibbix/commit/9398ad8f985cbf7d73af66a466e9bc1a39f822db))
 * **vscode:** added nix fmt ([463c5c4](https://github.com/ScottGibb/Gibbix/commit/463c5c4d0d8257d759bd7023b62b4eccdb436935))
-
 
 ### Bug Fixes
 
