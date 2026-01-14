@@ -19,4 +19,13 @@
       "syntax-theme" = "Nord";
     };
   };
+
+  programs.lazygit = {
+    enable=true;
+  };
+
+  programs.git-absorb = {
+    enable=true;
+  };
+
 }
