@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.2.0](https://github.com/ScottGibb/Gibbix/compare/v1.1.0...v1.2.0) (2026-01-23)
+
+
+### Features
+
+* add codex ([04c5bf7](https://github.com/ScottGibb/Gibbix/commit/04c5bf72867baecb1e213f639c2d115861ffd759))
+* add more git tools ([9398ad8](https://github.com/ScottGibb/Gibbix/commit/9398ad8f985cbf7d73af66a466e9bc1a39f822db))
+* Linux setup ([5da35fd](https://github.com/ScottGibb/Gibbix/commit/5da35fd941e610c57b0d2d317f7d48dfeb28766a))
+* tmux opens fish ([4ece1a0](https://github.com/ScottGibb/Gibbix/commit/4ece1a01db9f97f7fb8d6d967f212c963de3c314))
+* **vscode:** added nix fmt ([463c5c4](https://github.com/ScottGibb/Gibbix/commit/463c5c4d0d8257d759bd7023b62b4eccdb436935))
+
+
+### Bug Fixes
+
+* **ci:** build names are wrong ([d5ad083](https://github.com/ScottGibb/Gibbix/commit/d5ad08309929325fcd68560c1aeca376b808f9b2))
+* **ci:** nix build issues ([b3ccb4d](https://github.com/ScottGibb/Gibbix/commit/b3ccb4da39295e06b3de7cdf0f6baf641e404ba3))
+* **ci:** work linux ([4177e31](https://github.com/ScottGibb/Gibbix/commit/4177e31b766b5c0cca32c3d230dacc39a43f4dce))
+* docs and settings json ([5b27281](https://github.com/ScottGibb/Gibbix/commit/5b272815cb0439923f303f1257ca8c6c0c4787d5))
+* git tools ([e535348](https://github.com/ScottGibb/Gibbix/commit/e5353485cbf8098901145f969014c0d51e23e741))
+* just use two different nix builds ([3943904](https://github.com/ScottGibb/Gibbix/commit/394390441b78905f70d3fa2c8c2c21d7bab3f3db))
+* worklinux ([582d0ee](https://github.com/ScottGibb/Gibbix/commit/582d0ee9672b342abce2451f8497fe86b2122f61))
+
 ## [1.1.0](https://github.com/ScottGibb/Gibbix/compare/v1.0.0...v1.1.0) (2026-01-10)
 
 ### Features
