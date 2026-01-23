@@ -22,9 +22,12 @@ jobs:
             os: macos-latest
             system: aarch64-darwin
           # Linux configurations
-          - config: "scott@work-linux"
+          - config: "scogib01@work-linux"
             os: ubuntu-24.04-arm # Use ARM runner
             system: aarch64-linux
+          - config: "scogib01@work-linux"
+            os: ubuntu-24.04-arm # Use ARM runner
+            system: x86_64-linux
           - config: "pi@nas"
             os: ubuntu-latest
             system: x86_64-linux
