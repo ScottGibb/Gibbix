@@ -26,7 +26,7 @@ jobs:
             os: ubuntu-24.04-arm # Use ARM runner
             system: aarch64-linux
           - config: "scogib01@work-linux"
-            os: ubuntu-24.04-arm # Use ARM runner
+            os: ubuntu-latest
             system: x86_64-linux
           - config: "pi@nas"
             os: ubuntu-latest
@@ -52,12 +52,16 @@ jobs:
             accept-flake-config = true
 
       - name: Build Home Manager configuration
+        env:
+          NIX_SYSTEM: ${{ matrix.system }}
         run: |
           nix build ".#homeConfigurations.\"${{ matrix.config }}\".activationPackage" \
             --print-build-logs \
             --show-trace
 
       - name: Check configuration evaluation
+        env:
+          NIX_SYSTEM: ${{ matrix.system }}
         run: |
           nix eval ".#homeConfigurations.\"${{ matrix.config }}\".config.home.stateVersion" \
             --show-trace
