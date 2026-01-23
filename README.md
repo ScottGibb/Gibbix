@@ -76,10 +76,10 @@ Select the appropriate configuration for your system:
 home-manager  switch --flake ~/.config/home-manager#scogib01@work-mac
 ```
 
-#### Work Linux (ARM64)
+#### Work Linux
 
 ```bash
-home-manager  switch --flake ~/.config/home-manager#scott@work-linux
+home-manager  switch --flake ~/.config/home-manager#scogib01@work-linux
 ```
 
 #### Personal Mac (Apple Silicon)

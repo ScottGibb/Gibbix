@@ -87,12 +87,21 @@
           ./hosts/work-mac.nix
         ];
 
-        # Work Linux (aarch64)
-        "scott@work-linux" = mkHomeConfiguration "aarch64-linux" [
-          ./home.nix
-          ./modules/work.nix
-          ./hosts/work-linux.nix
-        ];
+        # Work Linux
+        "scogib01@work-linux" =
+          let
+
+            system =
+              let
+                s = builtins.getEnv "NIX_SYSTEM";
+              in
+              if s != "" then s else "x86_64-linux";
+          in
+          mkHomeConfiguration system [
+            ./home.nix
+            ./modules/work.nix
+            ./hosts/work-linux.nix
+          ];
 
         # Personal Mac (Apple Silicon)
         "scottgibb@personal-mac" = mkHomeConfiguration "aarch64-darwin" [
