@@ -1,7 +1,9 @@
 { pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [
+    codex
+  ];
 
   programs.git = {
     settings = {
