@@ -17,15 +17,13 @@ Gibbix is a flake-based Home Manager configuration that provides:
 
 ## 🖥️ Supported Systems
 
-This configuration supports five different host systems:
-
-| Host           | System | Architecture            | Profile  |
-|----------------|--------|-------------------------|----------|
-| `work-mac`     | macOS  | Apple Silicon (aarch64) | Work     |
-| `work-linux`   | Linux  | ARM64 (aarch64)         | Work     |
-| `personal-mac` | macOS  | Apple Silicon (aarch64) | Personal |
-| `nas`          | Linux  | x86_64                  | Personal |
-| `pi`           | Linux  | ARM64 (aarch64)         | Personal |
+| Host           | System | Architecture              | Profile  |
+|----------------|--------|---------------------------|----------|
+| `work-mac`     | macOS  | Apple Silicon (aarch64)   | Work     |
+| `work-linux`   | Linux  | x86_64 or ARM64 (aarch64) | Work     |
+| `personal-mac` | macOS  | Apple Silicon (aarch64)   | Personal |
+| `nas`          | Linux  | x86_64                    | Personal |
+| `pi`           | Linux  | ARM64 (aarch64)           | Personal |
 
 ## 📦 Prerequisites
 
