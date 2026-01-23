@@ -15,7 +15,7 @@
 
   programs.fish = {
     enable = true;
-    interactiveShellInit = lin.mkAfter ''
+    interactiveShellInit = lib.mkAfter ''
       # Nix (multi-user) environment
       if test -f /etc/profile.d/nix.fish
         source /etc/profile.d/nix.fish
