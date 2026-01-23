@@ -2,7 +2,6 @@
 
 ## [1.2.0](https://github.com/ScottGibb/Gibbix/compare/v1.1.0...v1.2.0) (2026-01-23)
 
-
 ### Features
 
 * add codex ([04c5bf7](https://github.com/ScottGibb/Gibbix/commit/04c5bf72867baecb1e213f639c2d115861ffd759))
@@ -10,7 +9,6 @@
 * Linux setup ([5da35fd](https://github.com/ScottGibb/Gibbix/commit/5da35fd941e610c57b0d2d317f7d48dfeb28766a))
 * tmux opens fish ([4ece1a0](https://github.com/ScottGibb/Gibbix/commit/4ece1a01db9f97f7fb8d6d967f212c963de3c314))
 * **vscode:** added nix fmt ([463c5c4](https://github.com/ScottGibb/Gibbix/commit/463c5c4d0d8257d759bd7023b62b4eccdb436935))
-
 
 ### Bug Fixes
 
