@@ -2,7 +2,6 @@
 
 ## [1.3.0](https://github.com/ScottGibb/Gibbix/compare/v1.2.0...v1.3.0) (2026-01-26)
 
-
 ### Features
 
 * added github light them styles to vscode setting ([2ec47d9](https://github.com/ScottGibb/Gibbix/commit/2ec47d981abd333646520ef90641152d23bc5f8f))
