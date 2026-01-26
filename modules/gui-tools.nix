@@ -31,8 +31,8 @@
   programs.vscode = {
     enable = true;
     profiles.default.userSettings = {
-      # Git sign-off commits
       "git.alwaysSignOff" = true;
+      "markdown-preview-github-styles.darkTheme" = "light";
     };
   };
 }
