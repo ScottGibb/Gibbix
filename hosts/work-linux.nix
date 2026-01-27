@@ -18,7 +18,8 @@
 
     shellAliases = lib.mkAfter {
       "kas-tmux-shell" = "command kas shell --command 'exec tmux new -A -s NixShell'";
-    }
+    };
+
     interactiveShellInit = lib.mkAfter ''
       # Nix (multi-user) environment
       if test -f /etc/profile.d/nix.fish
