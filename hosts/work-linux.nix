@@ -15,12 +15,17 @@
 
   programs.fish = {
     enable = true;
+
+    shellAliases = lib.mkAfter {
+      "kas-tmux-shell" = "command kas shell --command 'exec tmux new -A -s NixShell'";
+    }
     interactiveShellInit = lib.mkAfter ''
       # Nix (multi-user) environment
       if test -f /etc/profile.d/nix.fish
         source /etc/profile.d/nix.fish
       end
     '';
+
     shellInit = lib.mkAfter ''
         set -x NETRC_FILE ${config.home.homeDirectory}/.netrc
 
