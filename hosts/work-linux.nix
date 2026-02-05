@@ -47,7 +47,7 @@
       end
 
       # Add local bin to PATH
-      if not contains $PATH ${config.home.homeDirectory}/.local/bin $fish_user_paths
+      if not contains ${config.home.homeDirectory}/.local/bin $fish_user_paths
          set -gx PATH ${config.home.homeDirectory}/.local/bin $PATH
       end
     '';
