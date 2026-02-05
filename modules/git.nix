@@ -23,6 +23,7 @@
   home.packages = with pkgs; [
     git-absorb
     lazygit
+    git-statuses
   ];
 
 }

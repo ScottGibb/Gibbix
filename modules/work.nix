@@ -3,6 +3,8 @@
 {
   home.packages = with pkgs; [
     codex
+    guestfs-tools
+    libguestfs-with-appliance
   ];
 
   programs.git = {

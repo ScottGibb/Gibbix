@@ -10,6 +10,7 @@
       gping
       zellij
       fd
+      lsd
       dust
       just
       gnumake
@@ -19,6 +20,8 @@
       yazi
       nano
       delta
+
+      lazydocker
 
       # For working with FTDI devices
       libftdi
