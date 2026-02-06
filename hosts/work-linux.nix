@@ -12,7 +12,6 @@
   home.packages = with pkgs; [
     # Work-specific tools can be added here
     guestfs-tools
-    libguestfs-with-appliance
   ];
 
   programs.fish = {
