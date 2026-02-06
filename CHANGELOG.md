@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.3.0](https://github.com/ScottGibb/Gibbix/compare/v1.2.0...v1.3.0) (2026-02-06)
+
+
+### Features
+
+* add more work related tools ([3b61ce2](https://github.com/ScottGibb/Gibbix/commit/3b61ce2eb44264aca57b96d67dbeeeee4d2f1dc9))
+* add tmux alias ([6ead04b](https://github.com/ScottGibb/Gibbix/commit/6ead04bffba861c87d08919a64f71f497e9a38de))
+* added github light them styles to vscode setting ([2ec47d9](https://github.com/ScottGibb/Gibbix/commit/2ec47d981abd333646520ef90641152d23bc5f8f))
+
+
+### Bug Fixes
+
+* fish shell ([e0ec0ff](https://github.com/ScottGibb/Gibbix/commit/e0ec0ff7f51e00e54a10986894e54f77a7cc1a36))
+* no MacOS support ([4cae4b3](https://github.com/ScottGibb/Gibbix/commit/4cae4b3558868501bd79c34882951058733edff2))
+* tmux ([b86c19d](https://github.com/ScottGibb/Gibbix/commit/b86c19d4e8beab7d7804c705aac513e41b7335e3))
+
 ## [1.2.0](https://github.com/ScottGibb/Gibbix/compare/v1.1.0...v1.2.0) (2026-01-23)
 
 ### Features
