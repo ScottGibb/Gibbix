@@ -9,10 +9,14 @@
   home.username = "scogib01";
   home.homeDirectory = "/home/scogib01";
 
-  home.packages = with pkgs; [
-    # Work-specific tools can be added here
-    (lib.optional pkgs.stdenv.hostPlatform.isx86_64 guestfs-tools)
-  ];
+  home.packages =
+    with pkgs;
+    [
+      # Work-specific tools can be added here
+    ]
+    ++ lib.optionals pkgs.stdenv.hostPlatform.isx86_64 [
+      guestfs-tools
+    ];
 
   programs.fish = {
     enable = true;
