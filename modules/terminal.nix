@@ -5,7 +5,9 @@
     enable = true;
     interactiveShellInit = ''
       # Initialize starship
-      starship init fish | source
+      if type -q starship
+        starship init fish | source
+      end
     '';
     shellInit = ''
       set -gx EDITOR nano
