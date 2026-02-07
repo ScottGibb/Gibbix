@@ -11,7 +11,7 @@
 
   home.packages = with pkgs; [
     # Work-specific tools can be added here
-    (lib.optionals pkgs.stdenv.hostPlatform.isx86_64 [ guestfs-tools ])
+    (lib.optional pkgs.stdenv.hostPlatform.isx86_64 guestfs-tools)
   ];
 
   programs.fish = {
