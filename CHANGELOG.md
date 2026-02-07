@@ -2,7 +2,6 @@
 
 ## [1.3.1](https://github.com/ScottGibb/Gibbix/compare/v1.3.0...v1.3.1) (2026-02-07)
 
-
 ### Bug Fixes
 
 * starship ([0509a95](https://github.com/ScottGibb/Gibbix/commit/0509a95db09d786541b4613a048966608ee2ac5e))
