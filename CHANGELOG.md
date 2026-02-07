@@ -2,13 +2,11 @@
 
 ## [1.3.0](https://github.com/ScottGibb/Gibbix/compare/v1.2.0...v1.3.0) (2026-02-07)
 
-
 ### Features
 
 * add more work related tools ([3b61ce2](https://github.com/ScottGibb/Gibbix/commit/3b61ce2eb44264aca57b96d67dbeeeee4d2f1dc9))
 * add tmux alias ([6ead04b](https://github.com/ScottGibb/Gibbix/commit/6ead04bffba861c87d08919a64f71f497e9a38de))
 * added github light them styles to vscode setting ([2ec47d9](https://github.com/ScottGibb/Gibbix/commit/2ec47d981abd333646520ef90641152d23bc5f8f))
-
 
 ### Bug Fixes
 
