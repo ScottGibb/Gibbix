@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/ScottGibb/Gibbix/compare/v1.3.0...v1.4.0) (2026-02-11)
+
+
+### Features
+
+* add vscode input validation ([cf26bc7](https://github.com/ScottGibb/Gibbix/commit/cf26bc7871a57d1820a8b59211488be2bd82755b))
+
+
+### Bug Fixes
+
+* starship ([0509a95](https://github.com/ScottGibb/Gibbix/commit/0509a95db09d786541b4613a048966608ee2ac5e))
+
 ## [1.3.0](https://github.com/ScottGibb/Gibbix/compare/v1.2.0...v1.3.0) (2026-02-07)
 
 ### Features
