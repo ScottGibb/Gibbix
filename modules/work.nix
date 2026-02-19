@@ -3,6 +3,8 @@
 {
   home.packages = with pkgs; [
     codex
+    gcab
+    mtools
   ];
 
   programs.git = {
