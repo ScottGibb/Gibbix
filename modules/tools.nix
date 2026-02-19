@@ -24,7 +24,6 @@
 
       yazi
       nano
-      delta
 
       lazydocker
 
