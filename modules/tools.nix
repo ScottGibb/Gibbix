@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  pkgsUnstable,
+  lib,
+  ...
+}:
 
 {
   home.packages =
@@ -28,6 +33,7 @@
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       libftdi1
+      pkgsUnstable.cpx
     ];
 
   home.sessionPath = [
