@@ -9,12 +9,9 @@
   home.username = "scogib01";
   home.homeDirectory = "/home/scogib01";
 
-  home.packages =
-    with pkgs;
-    [
-      libguestfs
-    ]
-  
+  home.packages = with pkgs; [
+    libguestfs
+  ];
 
   programs.fish = {
     enable = true;
