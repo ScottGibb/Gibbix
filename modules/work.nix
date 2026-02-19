@@ -15,4 +15,15 @@
       };
     };
   };
+
+  programs.tmux = {
+    enable = true;
+    shell = "${pkgs.fish}/bin/fish";
+    terminal = "screen-256color";
+    customPaneNavigationAndResize = true;
+    extraConfig = ''
+      # Enable True color support
+      set-option -sa terminal-overrides ",xterm:Tc"
+    '';
+  };
 }

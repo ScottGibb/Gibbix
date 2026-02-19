@@ -3,6 +3,10 @@
 {
   programs.fish = {
     enable = true;
+    shellInit = ''
+      set -gx EDITOR nvim
+      set -gx VISUAL nvim
+    '';
     interactiveShellInit = ''
       # Initialize starship
       if type -q starship
@@ -22,17 +26,6 @@
         error_symbol = "[➜](bold red)";
       };
     };
-  };
-
-  programs.tmux = {
-    enable = true;
-    shell = "${pkgs.fish}/bin/fish";
-    terminal = "screen-256color";
-    customPaneNavigationAndResize = true;
-    extraConfig = ''
-      # Enable True color support
-      set-option -sa terminal-overrides ",xterm:Tc"
-    '';
   };
 
 }

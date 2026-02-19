@@ -5,6 +5,7 @@
     ./modules/tools.nix
     ./modules/git.nix
     ./modules/terminal.nix
+    ./modules/editor.nix
     ./modules/languages.nix
   ];
   # This value determines the Home Manager release that your configuration is
@@ -68,7 +69,12 @@
   #
   #  /etc/profiles/per-user/scottgibb/etc/profile.d/hm-session-vars.sh
   #
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    GIT_EDITOR = "nvim";
 
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
