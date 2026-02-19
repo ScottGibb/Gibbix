@@ -40,9 +40,6 @@
       set -gx BB_NUMBER_THREADS 16
       set -gx PARALLEL_MAKE "-j 16"
 
-      set -gx EDITOR ${pkgs.nano}/bin/nano
-      set -gx VISUAL ${pkgs.nano}/bin/nano
-
       set -x SHELL ${config.home.homeDirectory}/.nix-profile/bin/fish
 
       if test -f ${config.home.homeDirectory}/.env

@@ -9,9 +9,6 @@
         starship init fish | source
       end
     '';
-    shellInit = ''
-      set -gx EDITOR nano
-    '';
   };
 
   programs.starship = {

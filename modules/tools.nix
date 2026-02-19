@@ -23,7 +23,6 @@
       procs
 
       yazi
-      nano
 
       lazydocker
 

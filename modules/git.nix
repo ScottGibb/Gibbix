@@ -3,11 +3,6 @@
 {
   programs.git = {
     enable = true;
-    settings = {
-      core = {
-        editor = "nano";
-      };
-    };
   };
 
   programs.delta = {
