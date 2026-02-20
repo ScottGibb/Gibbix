@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  pkgsUnstable,
+  ...
+}:
 
 {
   home.packages =
@@ -29,9 +34,9 @@
       saleae-logic-2
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [ ];
-
   programs.vscode = {
     enable = true;
+    package = pkgsUnstable.vscode;
     profiles.default.userSettings = {
       "git.alwaysSignOff" = true;
       "git.inputValidationLength" = 72;
