@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.4.0](https://github.com/ScottGibb/Gibbix/compare/v1.3.0...v1.4.0) (2026-02-26)
+
+
+### Features
+
+* add cpx and unstable nixos pkgs ([86b4681](https://github.com/ScottGibb/Gibbix/commit/86b4681102464b867f90701221453b0248060603))
+* add editor ([4e5bac0](https://github.com/ScottGibb/Gibbix/commit/4e5bac0df5ae7c9fdbbd9869cf3d57eefda25aeb))
+* add partition tools ([97cb7d6](https://github.com/ScottGibb/Gibbix/commit/97cb7d663e94abb9138d690a61480d5d2a81538b))
+* add tauri overrides ([74876ca](https://github.com/ScottGibb/Gibbix/commit/74876cac664faf8aadcfdae45171f3d1c2d9fb03))
+* add tauri xcode setup ([ed1709f](https://github.com/ScottGibb/Gibbix/commit/ed1709fdcab42f70b62fceeda9922ad1d837578d))
+* add vscode input validation ([cf26bc7](https://github.com/ScottGibb/Gibbix/commit/cf26bc7871a57d1820a8b59211488be2bd82755b))
+* remove nano ([81e8e41](https://github.com/ScottGibb/Gibbix/commit/81e8e4148eb5c3eaca522a518712343fa323ad3b))
+* use latest vscode ([2584540](https://github.com/ScottGibb/Gibbix/commit/258454096be1e5704a1e6772c129d2a92305ca84))
+
+
+### Bug Fixes
+
+* fish terminal ([c010f7b](https://github.com/ScottGibb/Gibbix/commit/c010f7bfae22d6ab157a987ca408a1888df53c4a))
+* libguestfs ([0ca88fc](https://github.com/ScottGibb/Gibbix/commit/0ca88fc184e31d516887439930845ecf03caa201))
+* nixfmt ([03aeeda](https://github.com/ScottGibb/Gibbix/commit/03aeedab0771dc16e99e747121b77f9b3d3cae67))
+* remove duplicated delta ([aa5e072](https://github.com/ScottGibb/Gibbix/commit/aa5e0725cb8e1a8c397b228109b0d28c52e8186c))
+* starship ([0509a95](https://github.com/ScottGibb/Gibbix/commit/0509a95db09d786541b4613a048966608ee2ac5e))
+
 ## [1.3.0](https://github.com/ScottGibb/Gibbix/compare/v1.2.0...v1.3.0) (2026-02-07)
 
 ### Features
