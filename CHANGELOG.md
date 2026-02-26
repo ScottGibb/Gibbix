@@ -2,7 +2,6 @@
 
 ## [1.4.0](https://github.com/ScottGibb/Gibbix/compare/v1.3.0...v1.4.0) (2026-02-26)
 
-
 ### Features
 
 * add cpx and unstable nixos pkgs ([86b4681](https://github.com/ScottGibb/Gibbix/commit/86b4681102464b867f90701221453b0248060603))
@@ -13,7 +12,6 @@
 * add vscode input validation ([cf26bc7](https://github.com/ScottGibb/Gibbix/commit/cf26bc7871a57d1820a8b59211488be2bd82755b))
 * remove nano ([81e8e41](https://github.com/ScottGibb/Gibbix/commit/81e8e4148eb5c3eaca522a518712343fa323ad3b))
 * use latest vscode ([2584540](https://github.com/ScottGibb/Gibbix/commit/258454096be1e5704a1e6772c129d2a92305ca84))
-
 
 ### Bug Fixes
 
