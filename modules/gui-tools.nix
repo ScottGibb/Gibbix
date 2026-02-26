@@ -42,6 +42,12 @@
       "git.inputValidationLength" = 72;
       "git.inputValidationSubjectLength" = 72;
       "markdown-preview-github-styles.darkTheme" = "light";
+      "terminal.integrated.defaultProfile.osx" = "fish";
+      "terminal.integrated.profiles.osx" = {
+        fish = {
+          path = "${pkgs.fish}/bin/fish";
+        };
+      };
     };
   };
 }
