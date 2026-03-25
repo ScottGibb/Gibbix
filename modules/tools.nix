@@ -26,6 +26,9 @@
 
       lazydocker
 
+      pkgsUnstable.rgx
+      pkgsUnstable.deadbranch
+
       # For working with FTDI devices
       libftdi
     ]

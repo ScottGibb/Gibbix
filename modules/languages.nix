@@ -22,6 +22,18 @@
     # Web development
     nodejs
     bun
+    prettier
+
+
+    #Docker
+    hadolint
+    yamllint
+
+    #Markdown
+    markdownlint-cli2
+
+    #Shell
+    shellcheck
 
     # Writing Tools
     typst
