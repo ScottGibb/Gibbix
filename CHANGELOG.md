@@ -2,7 +2,6 @@
 
 ## [1.5.0](https://github.com/ScottGibb/Gibbix/compare/v1.4.0...v1.5.0) (2026-03-25)
 
-
 ### Features
 
 * add new tools ([5fa2bfd](https://github.com/ScottGibb/Gibbix/commit/5fa2bfd37e4950a22379a02b2a02b83fc1ca2491))
