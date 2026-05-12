@@ -22,7 +22,7 @@
       # Logic Analyser
       pulseview
       # Browser
-      # google-chrome
+      google-chrome
 
       # kicad # 6.0.9 # Commit Hash: 2c2f1519b511fd0302ac49f8d4aeb4c252195216
       # Open Source
