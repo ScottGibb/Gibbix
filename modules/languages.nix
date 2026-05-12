@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  pkgsUnstable,
+  ...
+}:
 
 {
   home.packages = with pkgs; [
@@ -17,13 +21,12 @@
     go
 
     # Blogs
-    hugo
+    pkgsUnstable.hugo
 
     # Web development
     nodejs
     bun
     prettier
-
 
     #Docker
     hadolint

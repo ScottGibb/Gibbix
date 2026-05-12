@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -23,10 +23,11 @@
 
   programs.fish = {
     enable = true;
-    shellInit = ''
+    shellInit = lib.mkAfter ''
       # Set SDK for Xcode toolchain so Rust/C can link system libs
       set -gx SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
       set -gx PATH /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin $PATH
     '';
   };
+
 }
