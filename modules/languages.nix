@@ -21,7 +21,7 @@
     go
 
     # Blogs
-    pkgsUnstable.hugo
+    # pkgsUnstable.hugo
 
     # Web development
     nodejs
