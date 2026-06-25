@@ -54,7 +54,7 @@ jobs:
     steps:
       # Git Checkout
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
@@ -164,7 +164,7 @@ jobs:
     name: Nix Format Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - run: nix profile install nixpkgs#nixfmt-rfc-style
       - run: find . -name "*.nix" -exec nixfmt --check {} +
