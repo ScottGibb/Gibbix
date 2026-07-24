@@ -2,12 +2,10 @@
 
 ## [1.5.0](https://github.com/ScottGibb/Gibbix/compare/v1.4.0...v1.5.0) (2026-07-24)
 
-
 ### Features
 
 * add new tools ([5fa2bfd](https://github.com/ScottGibb/Gibbix/commit/5fa2bfd37e4950a22379a02b2a02b83fc1ca2491))
 * use hugo unstable to get latest version ([1b32fbc](https://github.com/ScottGibb/Gibbix/commit/1b32fbc5ef67376608f4a807858c0a2e942e7169))
-
 
 ### Bug Fixes
 
@@ -16,7 +14,6 @@
 * remove hugo ([46966c9](https://github.com/ScottGibb/Gibbix/commit/46966c9de09317f3bb82ec1461d31ffb1906949a))
 * remove more guis ([b3a24e9](https://github.com/ScottGibb/Gibbix/commit/b3a24e9612b45405260c6dcb86669892facb686c))
 * remove problem GUIS ([2e5cfdf](https://github.com/ScottGibb/Gibbix/commit/2e5cfdfcf90c2eb551a1bef062ade64717f19cd5))
-
 
 ### Reverts
 
