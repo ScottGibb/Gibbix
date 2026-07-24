@@ -10,11 +10,9 @@
     with pkgs;
     [
       # IDES and Editors
-      obsidian
 
       # Diagrams/ Drawing
       gimp2
-      drawio
 
       # Video / Music
       # vlc-bin-universal # Universal build is brooken
