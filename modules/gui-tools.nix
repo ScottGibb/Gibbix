@@ -22,7 +22,6 @@
       # Logic Analyser
       pulseview
       # Browser
-      google-chrome
 
       # kicad # 6.0.9 # Commit Hash: 2c2f1519b511fd0302ac49f8d4aeb4c252195216
       # Open Source
@@ -34,19 +33,19 @@
       saleae-logic-2
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [ ];
-  programs.vscode = {
-    enable = true;
-    package = pkgsUnstable.vscode;
-    profiles.default.userSettings = {
-      "git.alwaysSignOff" = true;
-      "git.inputValidationLength" = 72;
-      "git.inputValidationSubjectLength" = 72;
-      "markdown-preview-github-styles.darkTheme" = "light";
-      "terminal.integrated.profiles.osx" = {
-        fish = {
-          path = "${pkgs.fish}/bin/fish";
-        };
-      };
-    };
-  };
+  #  programs.vscode = {
+  #    enable = true;
+  #    package = pkgsUnstable.vscode;
+  #    profiles.default.userSettings = {
+  #      "git.alwaysSignOff" = true;
+  #      "git.inputValidationLength" = 72;
+  #      "git.inputValidationSubjectLength" = 72;
+  #      "markdown-preview-github-styles.darkTheme" = "light";
+  #      "terminal.integrated.profiles.osx" = {
+  #        fish = {
+  #          path = "${pkgs.fish}/bin/fish";
+  #        };
+  #      };
+  #    };
+  #  };
 }

@@ -14,7 +14,6 @@
     ]
     ++ lib.optionals pkgs.stdenv.isDarwin [
       # whatsapp-for-mac  # SSL certificate issue with download
-      chatgpt # Not available on Linux
     ];
 
   # Git configuration (shared across all systems)
