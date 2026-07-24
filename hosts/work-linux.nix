@@ -3,9 +3,7 @@
   lib,
   config,
   ...
-}:
-
-{
+}: {
   home.username = "scogib01";
   home.homeDirectory = "/home/scogib01";
 

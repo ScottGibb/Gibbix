@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
     ./modules/tools.nix
     ./modules/git.nix
@@ -73,7 +71,6 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
     GIT_EDITOR = "nvim";
-
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

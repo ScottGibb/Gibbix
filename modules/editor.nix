@@ -1,11 +1,4 @@
-{
-  pkgs,
-  pkgsUnstable,
-  lib,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     git
     ripgrep

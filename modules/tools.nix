@@ -3,12 +3,13 @@
   pkgsUnstable,
   lib,
   ...
-}:
-
-{
-  home.packages =
-    with pkgs;
+}: {
+  home.packages = with pkgs;
     [
+      alejandra
+      deadnix
+      statix
+
       uutils-coreutils-noprefix # Rust replacement for GNU coreutils (no prefix)
       bat
       bottom

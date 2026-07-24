@@ -1,10 +1,4 @@
-{
-  pkgs,
-  pkgsUnstable,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     # Rust tools
     rustup
@@ -41,5 +35,4 @@
     # Writing Tools
     typst
   ];
-
 }

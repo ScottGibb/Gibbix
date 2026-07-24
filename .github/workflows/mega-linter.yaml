@@ -159,12 +159,18 @@ jobs:
             exit 1
           fi
 
-  # Nix Format checks
-  nix-format:
-    name: Nix Format Check
+  # Nix quality checks
+  nix-quality:
+    name: Nix Quality Checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
-      - run: nix profile install nixpkgs#nixfmt-rfc-style
-      - run: find . -name "*.nix" -exec nixfmt --check {} +
+      - name: Install Nix quality tools
+        run: nix profile install nixpkgs#alejandra nixpkgs#deadnix nixpkgs#statix
+      - name: Check formatting with Alejandra
+        run: alejandra --check .
+      - name: Check for dead Nix code
+        run: deadnix --fail .
+      - name: Run Statix
+        run: statix check .

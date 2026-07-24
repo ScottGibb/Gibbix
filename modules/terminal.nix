@@ -1,6 +1,4 @@
-{ pkgs, lib, ... }:
-
-{
+_: {
   programs.fish = {
     enable = true;
     shellInit = ''
@@ -27,5 +25,4 @@
       };
     };
   };
-
 }

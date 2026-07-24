@@ -1,12 +1,10 @@
-{ pkgs, lib, ... }:
-
 {
-  home.packages =
-    with pkgs;
-    [
-
-    ]
-    ++ lib.optionals pkgs.stdenv.isDarwin [
+  pkgs,
+  lib,
+  ...
+}: {
+  home.packages = with pkgs;
+    lib.optionals pkgs.stdenv.isDarwin [
     ];
 
   # Git configuration (shared across all systems)
