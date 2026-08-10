@@ -28,6 +28,9 @@
     shellInit = lib.mkAfter ''
       # Set SDK for Xcode toolchain so Rust/C can link system libs
       set -gx SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+
+      # Use the Codex CLI bundled with ChatGPT.app directly.
+      set -gx PATH "/Applications/ChatGPT.app/Contents/Resources" $PATH
       set -gx PATH /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin $PATH
     '';
   };
