@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.5.0](https://github.com/ScottGibb/Gibbix/compare/v1.4.0...v1.5.0) (2026-09-10)
+
+
+### Features
+
+* add new tools ([5fa2bfd](https://github.com/ScottGibb/Gibbix/commit/5fa2bfd37e4950a22379a02b2a02b83fc1ca2491))
+* use hugo unstable to get latest version ([1b32fbc](https://github.com/ScottGibb/Gibbix/commit/1b32fbc5ef67376608f4a807858c0a2e942e7169))
+
+
+### Bug Fixes
+
+* add better linting ([d979b5d](https://github.com/ScottGibb/Gibbix/commit/d979b5d22e832361d42f0d06c88df345dffc8d48))
+* codex path ([998c5e7](https://github.com/ScottGibb/Gibbix/commit/998c5e78978609083d7ab897ac4f65bde08e49ac))
+* formatting ([83e45b2](https://github.com/ScottGibb/Gibbix/commit/83e45b2283d374b610c239736236fae4606cdda4))
+* remove all GUI apps fron Nix Config ([25724ac](https://github.com/ScottGibb/Gibbix/commit/25724ac4f11b80b428db49238162f1e4ed00deac))
+* remove broken chrome ([ed8a21e](https://github.com/ScottGibb/Gibbix/commit/ed8a21e23218c8f58ca362bc3e68c32e8e66137b))
+* remove hugo ([46966c9](https://github.com/ScottGibb/Gibbix/commit/46966c9de09317f3bb82ec1461d31ffb1906949a))
+* remove more guis ([b3a24e9](https://github.com/ScottGibb/Gibbix/commit/b3a24e9612b45405260c6dcb86669892facb686c))
+* remove problem GUIS ([2e5cfdf](https://github.com/ScottGibb/Gibbix/commit/2e5cfdfcf90c2eb551a1bef062ade64717f19cd5))
+
+
+### Reverts
+
+* add google chrome ([03a8edc](https://github.com/ScottGibb/Gibbix/commit/03a8edcea07c45fed5e067ae8d94e9c7e3a939f4))
+
 ## [1.4.0](https://github.com/ScottGibb/Gibbix/compare/v1.3.0...v1.4.0) (2026-03-05)
 
 ### Features
